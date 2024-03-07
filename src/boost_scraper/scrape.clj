@@ -15,7 +15,8 @@
                  :coder "Coder Radio"
                  :office "Office Hours 2.0"
                  :bdadpod "Bitcoin Dad Pod"
-                 :unfilter "Unfilter"})
+                 :unfilter "Unfilter"
+                 :twib "This Week in Bitcoin"})
 
 (def id-by-show (into {} (map (comp vec reverse) show-by-id)))
 
@@ -304,7 +305,7 @@
   (add-tap #'p/submit)
 
 
-  (def test-token "...")
+  (def test-token "NGY3ZGEWMJYTMTY0OS0ZNMI2LWFIYMITYMMWMDQXNZQ0NDDI")
   (def last-lup #inst "2023-03-27T12-07:00")
 
   (->> (get-boosts
@@ -317,7 +318,7 @@
   (->> 10 (get-n-boosts test-token) #_tap> clojure.pprint/pprint)
   (->> 100 (get-n-boosts test-token)
        ; (filter #(= (:podcast %) "All Jupiter Broadcasting Shows")) tap>)
-       (filter #(= (:podcast %) "Bitcoin Dad Pod")) boost-report)
+       (filter #(= (:podcast %) "This Week in Bitcoin")) boost-report println)
 
   (->> (filter-by-show :lup) (get-n-boosts test-token 30) format-boosts)
   (->> (filter-by-show :coder) (get-n-boosts test-token 30) format-boosts)

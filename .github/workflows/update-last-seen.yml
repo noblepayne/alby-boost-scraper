@@ -16,6 +16,7 @@ on:
           - Linux Action News
           - Bitcoin Dad Pod
           - Unfilter
+          - This Week in Bitcoin
       last_seen_id:
         type: text
         description: 'Last seen boost ID'

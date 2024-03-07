@@ -16,6 +16,7 @@ on:
           - Linux Action News
           - Bitcoin Dad Pod
           - Unfilter
+          - This Week in Bitcoin
   schedule:
     - cron: '5 8 * * *'
 
